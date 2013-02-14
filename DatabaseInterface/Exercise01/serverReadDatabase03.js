@@ -7,7 +7,7 @@ http.createServer( function(req, res) {
 
   console.log('Server Started ');
 
-  parseXlsx('FavoriteFruits.xlsx', function(data) {
+  parseXlsx('FavoriteFruit.xlsx', function(data) {
 
       var query = require('url').parse(req.url).query;
       var row = require('querystring').parse(query).row;
@@ -17,7 +17,7 @@ http.createServer( function(req, res) {
 
       res.write('Welcome to the Spreadsheet reader !\n');
 
-      var rowdata  = data[row];
+      var rowdata  = data[17];
       var celldata = rowdata[col];
 
       res.write("Database cell "+row+" "+col+" = ");

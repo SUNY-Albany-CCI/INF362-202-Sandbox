@@ -7,7 +7,7 @@ http.createServer( function(req, res) {
 
   console.log('Server Started ');
 
-  parseXlsx('FavoriteFruits.xlsx', function(data) {
+  parseXlsx('FavoriteFruit.xlsx', function(data) {
 
       res.writeHead(200, {'content-type': 'text/plain'});
 
